@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Products</title>
+</head>
+<body>
+    <!-- SCROLL BUTTON -->
+    <button id="scrollButton" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between align-items-center" id="navbar">
+                <!-- logo -->
+                <a class="navbar-brand" href="#" id="logo"><img src="pic/logo.png" alt="hudabeauty logo" id="logo-pic"></a>
+
+                <!-- menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="mobile-menu">
+                 
+                    <ul class=" nav navbar-nav ms-auto mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cart -->
+                <div class="d-flex">
+                    <button id="cartBtn" class="btn text-light position-relative">
+                        <i class="fas fa-shopping-cart nav-icon" data-bs-toggle="toolip" data-bs-placement="bottom" title="view Cart"></i>
+                       <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">0</span>
+                    </button>
+                    <button class="btn text-light ">
+                        <i class="fa fa-user nav-icon" data-bs-toggle="toolip" data-bs-placement="bottom" title="Log Out" id="logout"></i>
+                    </button>
+                    <button class="btn">
+                        <i id="themeToggle" class="bi bi-moon-fill theme-icon nav-icon" data-bs-placement="bottom" title="Dark Mode"></i>
+                    </button>
+                </div>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" 
+                aria-controls="mobile-menu" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+<section class="hero-products">
+    <div class="hero-content" data-aos="fade-up">
+        <h1 class="darkModeHero" data-aos="zoom-in" data-aos-delay="200">
+            Discover Your Inner Glam
+        </h1>
+        <p class="darkModeHero" data-aos="fade-up" data-aos-delay="400">
+            Experience the luxurious world of Huda Beauty — where makeup meets confidence.
+        </p>
+        <a href="#products" class="btn btn-shop darkModeHero fw-bold" data-aos="flip-up" data-aos-delay="600">
+            Shop Now
+        </a>
+    </div>
+</section>
+
+    <!-- Filter Section -->
+    <section>
+        <h1 class="text-center h1 mt-4">Our Products</h1>
+        <div class="container mt-4">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <select id="categorySelect" class="form-select">
+                    <option value="foundation" selected>Foundation</option>
+                    <option value="lipstick">Lipstick</option>
+                    <option value="eyeshadow">Eyeshadow</option>
+                    <option value="nail polish">Nail Polish</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading and Error -->
+    <div id="loading" class="text-center my-3 d-none">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Loading products, please wait...</p>
+    </div>
+
+    <div id="error" class="text-danger text-center my-3 d-none">
+    Error loading products. Please try again later.
+    </div>
+
+    <!-- Products Section -->
+    <section class="container">
+    <div id="products" class="row gy-4"></div>
+    </section>
+   
+
+     <!-- footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="text-center">
+                <h2 class=" p-2 h2">HUDABEAUTY</h2>
+                <p>Discover Your True Beauty with HudaBeauty</p>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3 footer-text">
+                    <h5>REACH US</h5>
+                    <ul class="list-unstyled">
+                        <li class="c-icon"><i class="footer-menu fas fa-envelope"></i> hudabeauty@gmail.com</li>
+                        <li class="c-icon"><i class="footer-menu fas fa-phone"></i>+1-8901-567-234</li>
+                        <li class="c-icon"><i class="footer-menu fa-solid fa-location-dot"></i>LA, CA 90026, United States</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-text">
+                    <h5>QUICK LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer-menu"><a href="index.html">Home</a></li>
+                        <li class="footer-menu"><a href="about.html">About</a></li>
+                        <li class="footer-menu"><a href="products.html">Products</a></li>
+                        <li class="footer-menu"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-text">
+                    <h5>SUPPORT</h5>
+                     <ul class="list-unstyled">
+                        <li class="footer-menu">FAQs</li>
+                        <li class="footer-menu"><a href="contact.html">Contact Us</a></li>
+                        <li class="footer-menu"><a href="checkout.html">Shipping & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-text">
+                    <h5 class="mb-3">FOLLOW US</h5>
+                    <a href="https://x.com/hudabeauty?lang=en "><i class=" social-icon fa-brands fa-x-twitter me-3"></i></a>
+                    <a href="https://www.facebook.com/hudabeauty/"><i class=" social-icon fab fa-facebook me-3"></i></a>
+                    <a href="https://www.instagram.com/hudabeauty/"><i class=" social-icon fab fa-instagram me-3"></i></a>
+                    <a href="https://www.youtube.com/channel/UCRSvEADlY-caz3sfDNwvR1A "><i class=" social-icon fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 text-md-start text-center"><p>&copy; 2025. All rights reserved.</p></div>
+                <div class="col-md-6 text-md-end text-center"><p> Huda Beauty</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library Script -->  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+ [
+  { "id": 1, "category": "foundation", "name": "Foundation 1", "price": 20, "img": "https://i.pinimg.com/736x/75/3a/9d/753a9d44ce7f9c6b046a453d77461c53.jpg" },
+  { "id": 2, "category": "foundation", "name": "Foundation 2", "price": 25, "img": "https://i.pinimg.com/1200x/af/f1/aa/aff1aad1bcd947ca7a8e993af9313b37.jpg" },
+  { "id": 3, "category": "foundation", "name": "Foundation 3", "price": 18, "img": "https://i.pinimg.com/1200x/c2/85/a2/c285a2f66877018c91c32729c6dad188.jpg" },
+  { "id": 4, "category": "foundation", "name": "Foundation 4", "price": 22, "img": "https://i.pinimg.com/1200x/3d/3b/e0/3d3be08f2af25faec72435c0481cef89.jpg" },
+  { "id": 5, "category": "foundation", "name": "Foundation 5", "price": 19, "img": "https://i.pinimg.com/1200x/82/1b/47/821b473d4f7f5fca1282b8604351560d.jpg" },
+  { "id": 6, "category": "foundation", "name": "Foundation 6", "price": 21, "img": "https://i.pinimg.com/736x/25/cb/eb/25cbeb1e8822b760b941eb821348d12e.jpg" },
+ 
+  { "id": 7, "category": "lipstick", "name": "Lipstick 1", "price": 15, "img": "https://i.pinimg.com/1200x/14/12/50/141250754c84c7d40e8ca11983c3b078.jpg" },
+  { "id": 8, "category": "lipstick", "name": "Lipstick 2", "price": 17, "img": "https://i.pinimg.com/736x/4b/08/c7/4b08c7b938143c87e2e3ea49c61444e8.jpg" },
+  { "id": 9, "category": "lipstick", "name": "Lipstick 3", "price": 16, "img": "https://i.pinimg.com/736x/35/fc/82/35fc82e66a73000cea232243dd8e2106.jpg" },
+  { "id": 10, "category": "lipstick", "name": "Lipstick 4", "price": 18, "img": "https://i.pinimg.com/736x/36/19/8a/36198a1758367bfebdd998fbf84b97c5.jpg" },
+  { "id": 11, "category": "lipstick", "name": "Lipstick 5", "price": 14, "img": "https://i.pinimg.com/1200x/84/e8/32/84e8325c27914fd7ec478cc91d61c11e.jpg" },
+  { "id": 12, "category": "lipstick", "name": "Lipstick 6", "price": 15, "img": "https://i.pinimg.com/1200x/e0/c9/3b/e0c93b080210c67cd80c371f95913f92.jpg" },
+
+  { "id": 13, "category": "eyeshadow", "name": "Eyeshadow 1", "price": 10, "img": "https://i.pinimg.com/1200x/59/eb/e7/59ebe782b27c2b9214ab714a56fe832c.jpg" },
+  { "id": 14, "category": "eyeshadow", "name": "Eyeshadow 2", "price": 12, "img": "https://i.pinimg.com/736x/d1/d2/c9/d1d2c9fc48af64bc76d8100a31a6c6c7.jpg" },
+  { "id": 15, "category": "eyeshadow", "name": "Eyeshadow 3", "price": 11, "img": "https://i.pinimg.com/736x/57/2a/79/572a79cbe2bf7b16c9834bba1b578a27.jpg" },
+  { "id": 16, "category": "eyeshadow", "name": "Eyeshadow 4", "price": 13, "img": "https://i.pinimg.com/1200x/cc/06/c1/cc06c130255f06f895c6fdda6b323cde.jpg" },
+  { "id": 17, "category": "eyeshadow", "name": "Eyeshadow 5", "price": 10, "img": "https://i.pinimg.com/1200x/9d/1d/cd/9d1dcd2e4f891aa1107cedbd656cd3a5.jpg" },
+  { "id": 18, "category": "eyeshadow", "name": "Eyeshadow 6", "price": 12, "img": "https://i.pinimg.com/736x/72/2e/18/722e18e50575522573eacbb4f4c5fd2e.jpg" },
+
+  { "id": 19, "category": "nail polish", "name": "Nail Polish 1", "price": 8, "img": "https://i.pinimg.com/736x/1a/5c/b1/1a5cb1c8e004c341cb153fd5b1439dd1.jpg" },
+  { "id": 20, "category": "nail polish", "name": "Nail Polish 2", "price": 9, "img": "https://i.pinimg.com/736x/dd/a4/3e/dda43eac9a82a4b79be81461cc368adb.jpg" },
+  { "id": 21, "category": "nail polish", "name": "Nail Polish 3", "price": 7, "img": "https://i.pinimg.com/736x/0d/d5/b2/0dd5b2b9d85da34299a1c420ea6bff5c.jpg" },
+  { "id": 22, "category": "nail polish", "name": "Nail Polish 4", "price": 8, "img": "https://i.pinimg.com/736x/35/78/b2/3578b2a1217bd380af7c7d42b319e046.jpg" },
+  { "id": 23, "category": "nail polish", "name": "Nail Polish 5", "price": 9, "img": "https://i.pinimg.com/1200x/3b/83/da/3b83da464815b91c865c6255d9f61afe.jpg" },
+  { "id": 24, "category": "nail polish", "name": "Nail Polish 6", "price": 7, "img": "https://i.pinimg.com/736x/7b/a1/29/7ba129cfff3e4e97c8f69de7b3de7edf.jpg" }
+]
+
+
+
+
+
+

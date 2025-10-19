@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- SCROLL BUTTON -->
+    <button id="scrollButton" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between align-items-center" id="navbar">
+                <!-- logo -->
+                <a class="navbar-brand" href="#" id="logo"><img src="pic/logo.png" alt="hudabeauty logo" id="logo-pic"></a>
+
+                <!-- menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="mobile-menu">
+                 
+                    <ul class=" nav navbar-nav ms-auto mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cart -->
+                <div class="d-flex">
+                    <button id="cartBtn" class="btn position-relative">
+                        <i class="fas fa-shopping-cart nav-icon" data-bs-toggle="toolip" data-bs-placement="bottom" title="view Cart"></i>
+                       <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">0</span>
+                    </button>
+                    <button class="btn">
+                        <i class="fa fa-user nav-icon" data-bs-toggle="toolip" data-bs-placement="bottom" title="Log Out" id="logout"></i>
+                    </button>
+                    <button class="btn">
+                        <i id="themeToggle" class="bi bi-moon-fill theme-icon nav-icon" data-bs-placement="bottom" title="Dark Mode"></i>
+                    </button>
+                </div>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" 
+                aria-controls="mobile-menu" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero-section">  
+        <div class="container">
+            <div class="hero-row row ">
+                <div class="hero-text col-md-6" data-aos="fade-right">
+                    <h1 class="darkModeHero" data-aos="zoom-in" data-aos-delay="200">
+                        Discover Your True Beauty with HudaBeauty
+                    </h1>
+                    <p class="darkModeHero" data-aos="fade-up" data-aos-delay="400">
+                        Unleash your inner beauty with Huda Beauty's iconic makeup collection. 
+                        From flawless foundations to striking lip shades, discover products that empower 
+                        confidence and creativity in every swipe.
+                    </p>
+                    <a href="products.html" class="btn btn-home darkModeHero fw-bold" data-aos="flip-up" data-aos-delay="600">
+                        Explore Products
+                    </a>
+                </div>
+                <div class="hero-image col-md-6" data-aos="fade-left" data-aos-delay="300">
+                    <img src="pic/homee1.png" alt="Huda Beauty">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    
+    <!-- featured products slider -->
+    <div class="container">
+        <h1 class="text-center my-4 h1">Featured Products</h1>
+      
+        <div class="product-slider  rounded ">
+          <button class="slider-btn prev" id="prevBtn">&#8249;</button>
+          <button class="slider-btn next" id="nextBtn">&#8250;</button>
+      
+          <div id="track" class="product-track py-4">
+            <div class="product-card"><img alt="This is a primer photo" src="https://i.pinimg.com/736x/5e/2a/d7/5e2ad749ba18fe00cce36f7a079bd8a5.jpg"><p>Primer</p></div>
+            <div class="product-card"><img alt="This is a foundation photo" src="https://i.pinimg.com/1200x/a1/63/46/a16346b1afcc4931470efb32b41cdf26.jpg"><p>Foundation</p></div>
+            <div class="product-card"><img alt="This is a bronzer photo" src="https://i.pinimg.com/1200x/e2/50/fe/e250fed4c143a6b24fc91e28bb678498.jpg"><p>Bronzer</p></div>
+            <div class="product-card"><img alt="This is a blush photo" src="https://i.pinimg.com/1200x/81/d2/ee/81d2eefd2a2081105445636b5029483e.jpg"><p>Blush</p></div>
+            <div class="product-card"><img alt="This is a makeup palette photo" src="https://i.pinimg.com/736x/c2/25/de/c225dedd28056ee26f1ebc0cfce3eb43.jpg"><p>Makeup Palette</p></div>
+            <div class="product-card"><img alt="This is a mascara photo" src="https://i.pinimg.com/1200x/c3/a8/23/c3a82395ec394e575bef8192e81b3cc2.jpg"><p>Mascara</p></div>
+            <div class="product-card"><img alt="This is a lip contour photo" src="https://i.pinimg.com/1200x/ff/9f/48/ff9f4855784b656b0d41ce7b1af0c3c6.jpg"><p>Lip Contour</p></div>
+            <div class="product-card"><img alt="This is a lipstick photo" src="https://i.pinimg.com/736x/b8/b8/11/b8b81129c02e83f18abe67afad1995b2.jpg"><p>LipStick</p></div>
+            <div class="product-card"><img alt="This is a poweder photo" src="https://i.pinimg.com/736x/2d/4b/52/2d4b5265ceb21c242b8fb7bc93b8b7aa.jpg"><p>Powder</p></div>
+            <div class="product-card"><img alt="This is a makeup fixer photo" src="https://i.pinimg.com/1200x/97/63/70/976370c1f899be82107c4239ce9ecfac.jpg"><p>Makeup Fixer</p></div>
+          </div>
+        </div>
+    </div>
+
+    <!-- feature info bar -->
+    <section class="info-bar py-4 scroll-animate">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 info-item ">
+                    <i class="info-bar-icon fas fa-shipping-fast"></i>
+                    <h3>Free Dlivery</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="col-md-3 info-item ">
+                    <i class="info-bar-icon fas fa-credit-card"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure transaction</p>
+                </div>
+                <div class=" col-md-3 info-item ">
+                    <i class="info-bar-icon fas fa-sync-alt"></i>
+                    <h3>Easy Returns</h3>
+                    <p>3 days money back guarantee</p>
+                </div>
+                <div class="col-md-3 info-item ">
+                    <i class="info-bar-icon fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Always here to help you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Best Seller-->
+    <section class="best-seller mt-5 scroll-animate">
+        <div class="container">
+              <h1 class="text-center my-5 h1">Our Best Sellers</h1>
+            <div class="row">   
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwb34d4a4e/images/fauxfilter-concealer/FAUXFILTER-CONCEALER_PDP_REFRESH_PACKSHOTS_FINAL_4.1G-GRAHAMCRACKER.jpg?sw=1024&sh=1024" alt="Concealerpic">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw037d5b43/images/fauxfilter-concealer/FAUXFILTER-CONCEALER_PDP_REFRESH_BA_FINAL_4.1G-GRAHAMCRACKER.jpg?sw=420&sh=420&sm=fit&sfrm=jpg" alt="Concealerpic">
+                    </div>
+                    <div class="ms-3">
+                        <small> Concealer</small>
+                        <h6 class="fw-bold best-seller-heading ">FauxFilter Luminous Matte</h6>
+                        <small>⭐⭐⭐⭐⭐ 4.8 (1738)</small>
+                        <p class="mb-1">$31.00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw61c79dae/images/one-coat-wow/HB-1CoatWow-Packshots-06.jpg?sw=1024&sh=1024" alt="Mascara">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwc4d6b2c2/images/one-coat-wow/1-COAT-WOW-PDP_HUDA-SELFIE.jpg?sw=1242&sh=1242&sm=fit" alt="Mascara">
+                    </div>
+                    <div class="ms-3" >
+                        <small>Mascara</small>
+                        <h6 class="fw-bold best-seller-heading ">Extra Volumizing and Lifting</h6>
+                        <small>⭐⭐⭐⭐⭐ 4.8 (608)</small>
+                        <p class="mb-1">$25.00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw779eb2e0/images/ff-extra-shine-lip-gloss/LIPGLOSS-PACKSHOTS_GLASSY-1.jpg?sw=1024&sh=1024" alt="Lip Gloss">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwa68b0c69/images/ff-extra-shine-lip-gloss/LIPGLOSS-BA_GLASSY-BA.jpg?sw=64&sh=64" alt="Lip Gloss">
+                    </div>
+                    <div class="ms-3">
+                        <small>Lip Gloss</small>
+                        <h6 class="fw-bold best-seller-heading ">FAUX FILLER Extra Shine</h6>
+                        <small>⭐⭐⭐⭐⭐ 4.9 (700)</small>
+                        <p class="mb-1"> $21.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">   
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwd23e7f39/images/Icy-Nude/Palette/HB_ICY-NUDE-PDP-FINAL_PACKSHOT.jpg?sw=1024&sh=1024" alt="Pallette">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwcec0234a/images/Icy-Nude/Palette/HB_ICY-NUDE-PDP-FINAL_KEY%20VISUAL.jpg?sw=1242&sh=1242&sm=fit" alt="Pallette">
+                    </div>
+                    <div class="ms-3">
+                        <small>Pallette</small>
+                        <h6 class="fw-bold best-seller-heading ">Icy Nude Eyeshadow Palette</h6>
+                        <small>⭐⭐⭐⭐⭐ 4.9 (429)</small>
+                        <p class="mb-1">$69.00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwafd26a76/images/sfra/lipcontour2.0/packshot/HB-LipContour-2.0-Packshots-UniversalRed-2.jpg?sw=1024&sh=1024" alt="lip contour">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwa9e93ec2/images/sfra/lipcontour2.0/lips/LIP-CONTOUR-PDP-GRIDS_UNIVERSAL-RED-GRID.jpg?sw=64&sh=64" alt="lip contour">
+                    </div>
+                    <div class="ms-3">
+                        <small>Lip Contour</small>
+                        <h6 class="fw-bold best-seller-heading "> Automatic Matte Lip Pencil</h6>
+                        <small>⭐⭐⭐⭐⭐ 4.9 (429)</small>
+                        <p class="mb-1">$23.00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwf33c44ce/images/color-corrector/FAUXFILTER-COLOR-CORRECTOR_PDP_PACKSHOTS_FINAL_PINK-POMELO.jpg?sw=1024&sh=1024" alt="Eye Color Corrector">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw0805edfd/images/mini-corrector/FAUXFILTER-COLOR-CORRECTOR_PDP_INFOGRAPHICS_FINAL_SBS_CHERRY-BLOSSOM.jpg?sw=1242&sh=1242&sm=fit" alt="Eye Color Corrector">
+                    </div>
+                    <div class="ms-3">
+                        <small>Eye Corrector</small>
+                        <h6 class="fw-bold best-seller-heading ">Under Eye Corrector</h6>
+                           <small>⭐⭐⭐⭐⭐ 4.8 (1277)</small>
+                        <p class="mb-1"> $30.00</p>
+                     
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">   
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw2f98f8f6/images/Easy-Bake-Setting-Spray-2025/EASYBAKE-SETTING%20SPRAY-PDP_PACKSHOT.jpg?sw=1024&sh=1024" alt="sitting spray">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw67c8355e/images/Easy-Bake-Setting-Spray-2025/EASYBAKE-SETTING%20SPRAY-PDP-FINAL-ECOMM_2-WITH-WITHOUT.jpg?sw=64&sh=64" alt="sitting spray">
+                    </div>
+                    <div class="ms-3">
+                        <small>Setting Spray</small>
+                        <h6 class="fw-bold best-seller-heading ">with 16-Hour Wear</h6>
+                        <small>⭐⭐⭐⭐⭐ 4.7 (297)</small>
+                        <p class="mb-1">$31.00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw75c1bf59/images/Easy_Bake_2025_Update/EB-LOOSE-REBRAND-PACKSHOT-FINAL_UBEBIRTHDAYCAKE.jpg?sw=1024&sh=1024" alt="powder">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw24c38611/images/Easy_Bake_2025_Update/EB-LOOSE-REBRAND-B&A-FINAL_UBEBIRTHDAYCAKE.jpg?sw=64&sh=64" alt="Powder">
+                    </div>
+                    <div class="ms-3">
+                        <small>Fix Powder</small>
+                        <h6 class="fw-bold best-seller-heading ">Baking & Setting Powder</h6>
+                        <small>⭐⭐⭐⭐⭐ 4.9 (206)</small>
+                        <p class="mb-1"> $39.00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex custom-col">
+                    <div class="best-seller-img">
+                        <img class="front" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dwa4669a7d/images/easy-blur-primer/EASY-BLUR-PRIMER_PDP_REBRAND_FINAL_PACKSHOT.jpg?sw=1024&sh=1024" alt="primer">
+                        <img class="back" src="https://hudabeauty.com/dw/image/v2/BCNC_PRD/on/demandware.static/-/Sites-huda-master-catalog/default/dw7f93ec7a/images/easy-blur-primer/EASY-BLUR-PRIMER_PDP_REBRAND_FINAL_BA-MEDIUM.jpg?sw=64&sh=64" alt="primer">
+                    </div>
+                    <div class="ms-3">
+                        <small>Primer</small>
+                        <h6 class="fw-bold best-seller-heading ">Smoothing & Pore-Minimizing</h6>
+                        <small >⭐⭐⭐⭐⭐ 4.9 (465)</small >
+                        <p class="mb-1">$29.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="text-center">
+                <h2 class=" p-2 h2">HUDABEAUTY</h2>
+                <p>Discover Your True Beauty with HudaBeauty</p>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3 footer-text">
+                    <h5>REACH US</h5>
+                    <ul class="list-unstyled">
+                        <li class="c-icon"><i class="footer-menu fas fa-envelope"></i> hudabeauty@gmail.com</li>
+                        <li class="c-icon"><i class="footer-menu fas fa-phone"></i>+1-8901-567-234</li>
+                        <li class="c-icon"><i class="footer-menu fa-solid fa-location-dot"></i>LA, CA 90026, United States</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-text">
+                    <h5>QUICK LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer-menu"><a href="index.html">Home</a></li>
+                        <li class="footer-menu"><a href="about.html">About</a></li>
+                        <li class="footer-menu"><a href="products.html">Products</a></li>
+                        <li class="footer-menu"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-text">
+                    <h5>SUPPORT</h5>
+                     <ul class="list-unstyled">
+                        <li class="footer-menu">FAQs</li>
+                        <li class="footer-menu"><a href="contact.html">Contact Us</a></li>
+                        <li class="footer-menu"><a href="checkout.html">Shipping & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-text">
+                    <h5 class="mb-3">FOLLOW US</h5>
+                    <a href="https://x.com/hudabeauty?lang=en "><i class=" social-icon fa-brands fa-x-twitter me-3"></i></a>
+                    <a href="https://www.facebook.com/hudabeauty/"><i class=" social-icon fab fa-facebook me-3"></i></a>
+                    <a href="https://www.instagram.com/hudabeauty/"><i class=" social-icon fab fa-instagram me-3"></i></a>
+                    <a href="https://www.youtube.com/channel/UCRSvEADlY-caz3sfDNwvR1A "><i class=" social-icon fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 text-md-start text-center"><p>&copy; 2025. All rights reserved.</p></div>
+                <div class="col-md-6 text-md-end text-center"><p> Huda Beauty</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library Script -->  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
