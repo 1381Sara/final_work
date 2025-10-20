@@ -1368,8 +1368,9 @@ body.dark-mode {
 /* Mobile (≤576px) */
 @media (max-width: 576px) {
 #mobile-menu ul li a {
-  font-size: 15px;
+  font-size: 14px;
 }
+
 #logo-pic {
   height: auto;
   width: 100px;
@@ -1449,6 +1450,7 @@ td .role {
 .contactPage p{
   padding-bottom: 100px;
 }
+
 
 /* cart */
 .cart-hero {
